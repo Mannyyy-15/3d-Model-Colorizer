@@ -112,9 +112,13 @@ code {
     font-size: 1.5rem;
     color: #a8a8a8;
     text-align: center;
+    flex-direction: column;
 
     h1 {
       margin-left: 4px;
+    }
+    span{
+      display: none;
     }
   }
 
@@ -125,6 +129,12 @@ code {
       margin-left: 2px;
       font-size: 1.5rem; /* Reduce spacing for small screens */
     }
+    .holder span{
+      display: block;
+      font-size: 1.2rem; /* Reduce spacing for small screens */
+
+    }
+
   }
 
   @media (max-width: 480px) {
@@ -132,6 +142,11 @@ code {
     .holder h1 {
       margin-left: 2px;
       font-size: 1rem; /* Reduce spacing for small screens */
+    }
+    .holder span{
+      display: block;
+      font-size: 0.7rem; /* Reduce spacing for small screens */
+
     }
   }
 }

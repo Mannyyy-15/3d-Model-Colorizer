@@ -57,7 +57,7 @@ const TeapotState = proxy({
 
 function App() {
   const [selectedModel, setSelectedModel] = useState("Shoe");
-  const [linkOpened, setLinkOpened] = useState(false);
+  // const [linkOpened, setLinkOpened] = useState(false);
   const controls = useRef();
 
   const updateShoeCurrent = (value) => {
@@ -206,8 +206,8 @@ function App() {
         <div
           className="holder"
           onClick={() => {
-            setLinkOpened(true);
-            window.open("https://github.com/Madewill/3d-product-configurator.git");
+            // setLinkOpened(true);
+            // window.open("https://github.com/Madewill/3d-product-configurator.git");  
           }}
         >
           {/* {linkOpened ? (
@@ -216,6 +216,7 @@ function App() {
             <AiOutlineStar color="#a8a8a8" size={40} />
           )} */}
           <h1>3D Model Colorizer</h1>
+          <span>Click on any parts</span>
         </div>
       </div>
     </>
