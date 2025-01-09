@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+  position: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.color-picker {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+  transition: opacity 0.3s;
+  color: white;
+}
+
+.model-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 90vh;
+  max-height: 90vh;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  div {
+    h4 {
+      text-align: center;
+      margin: 0;
+      color: #a8a8a8;
+    }
+    img {
+      max-width: 100px;
+      object-fit: contain;
+    }
+  }
+
+  div:hover {
+    cursor: pointer;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    right: 0;
+    left: 0;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 8px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // background-color: rgba(255, 255, 255, 0.9);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div img {
+      max-width: 65px; /* Adjust size for smaller devices */
+    }
+
+    div h4 {
+      font-size: 12px; /* Adjust font size for smaller devices */
+    }
+  }
+}
+
+
+.info-icon {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+
+  .holder { 
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center contents inside the holder */
+    font-size: 1.5rem;
+    color: #a8a8a8;
+    text-align: center;
+
+    h1 {
+      margin-left: 4px;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    .holder h1 {
+      margin-left: 2px;
+      font-size: 1.5rem; /* Reduce spacing for small screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px; /* Further adjust font size for very small screens */
+    .holder h1 {
+      margin-left: 2px;
+      font-size: 1rem; /* Reduce spacing for small screens */
+    }
+  }
+}
+
+
+.info-icon:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+}
