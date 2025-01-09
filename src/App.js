@@ -216,7 +216,7 @@ function App() {
             <AiOutlineStar color="#a8a8a8" size={40} />
           )} */}
           <h1>3D Model Colorizer</h1>
-          <span>Click on any parts</span>
+          <span>Click parts to color</span>
         </div>
       </div>
     </>
